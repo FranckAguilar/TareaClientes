@@ -1,0 +1,28 @@
+﻿@page
+@model MyApp.Namespace.IndexModel
+@{
+}
+<div class="container">
+    <h1>Listado Familias</h1>
+    <hr>
+    <a asp-page="Create" class="btn btn-primary mb-3">Crear Nuevo</a>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var fam in Model.ListaFamilias){
+                <tr>
+                    <td>@fam.IdFamilia</td>
+                    <td>@fam.Nombre</td>
+                    <td>@fam.Descripcion</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
